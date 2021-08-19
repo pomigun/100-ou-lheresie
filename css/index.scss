@@ -6,6 +6,7 @@ body {
     width: 100%;
     min-height: 100vh;
     font-family: 'Lato', sans-serif;
+    background-color: #141414;
 
     & header {
         width: 100%;
@@ -14,7 +15,8 @@ body {
         justify-content: center;
         align-items: center;
         padding: 1em;
-        background-color: red;
+        background-color: #313131;
+        color: white;
 
         & h1 {
             font-size: 2em;
@@ -38,12 +40,14 @@ body {
                     width: 100%;
                     height: 100%;
                     border-radius: 0;
+                    background-color: #C39951;
                 }
                 & .dropdown-menu {
                     width: 100%;
                     text-align: center;
                     padding: 1em;
                     inset: 0px 25% auto 25%;
+                    background-color: #C39951;
                 }
             }
         }
@@ -63,26 +67,27 @@ body {
                 & button:hover {
                     border: 0.1em solid black;
                     transform: scale(1.1);
-                    background-color: #eb4d4c;
+                    background-color: #C39951;
                 }
             }
             & .main-game-wrapper {
                 & div {
                     & .player {
+                        color: white;
                         font-weight: bold;
                         padding: 0.5em;
                         font-size: 2.5em;
                     }
                     & .round-score {
-                        color: #eb4d4c;
+                        color: #C39951;
                         padding: 0.8em;
                         font-size: 3.5em;
-                        text-shadow: 0.01em 0.01em 0.01em darken(#eb4d4c, 20);
+                        text-shadow: 0.01em 0.01em 0.01em darken(#C39951, 30);
                     }
                     & .current-wrapper {
                         width: 8em;
                         padding: 0.5em;
-                        background-color: #eb4d4c;
+                        background-color: #C39951;
 
                         & .current {
                             font-size: 1em;
@@ -138,7 +143,23 @@ body {
                             & button:hover {
                                 border: 0.1em solid black;
                                 transform: scale(1.1);
-                                background-color: #eb4d4c;
+                                background-color: #C39951;
+                            }
+                            & .mute {
+                                margin-top: 2em;
+                                & button {
+                                    border: none;
+                                    font-size: 1em;
+                                    border-radius: 0.5em;
+                                    padding: 0.3em;
+                                    margin-left: 0.5em;
+                                    transition: transform 0.2s;
+                                }
+                                & button:hover {
+                                    border: 0.1em solid black;
+                                    transform: scale(1.1);
+                                    background-color: #C39951;
+                                }
                             }
                         }
                     }
@@ -165,5 +186,14 @@ body {
                 }
             }
         }
+    }
+}
+
+@keyframes Victory {
+    0% {
+        box-shadow: -1em 1em 1em rgba(black,0.3);
+    }
+    100% {
+        box-shadow: -1.5em 1.5em 0em rgba(red,0.7);
     }
 }
